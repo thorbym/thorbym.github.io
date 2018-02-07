@@ -79,11 +79,24 @@ input[type=text] {
     border-width: 0.2em;
 }
 
-input[type=button] {
+input[type=submit] {
     width: 85px;
     height: 24px;
     box-sizing: border-box;
     border: outset;
     border-width: 0.2em;
     box-shadow: 1px 1px 1px #000000;
+}
+
+.bottomBar {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  background: #C3C6CB;
+  height: 30px;
+  width: 100%;
+  padding: 1px;
+  clear: both;
+  border-style: outset;
+  border-width: 2px 0px 0px 0px;
 }
