@@ -4,6 +4,9 @@
 		function loadPage() {
 			window.location.href = "https://thorbym.github.io/desktop.html";
 		}
+		function goBack() {
+			window.history.back();
+		}
 	</script>
 </head>
 <div class=wholeThing>
@@ -19,11 +22,11 @@
 
 		<div class='boxDetails'>
 			<div class='rightBox'>
-				<p><input type='submit' value='OK' /></p>
-				<p><input type='submit' value='Cancel' /></p>
+				<p><input type='submit' value='OK' onclick='loadPage();' /></p>
+				<p><input type='submit' value='Cancel' onclick='goBack();' /></p>
 			</div>
 			<p>Type a user name and password to log on to The Dialups.</p>
-			<p><u>U</u>ser name:&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' value='thedialups' onclick='loadPage();' /></p>
+			<p><u>U</u>ser name:&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' value='thedialups' /></p>
 			<p><u>P</u>assword:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' value='********' /></p>
 		</div>
 			
