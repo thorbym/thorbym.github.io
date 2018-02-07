@@ -1,0 +1,89 @@
+html, body {
+    height: 100%;
+}
+
+body {
+  background: #55ABAA;
+    margin: 0;
+}
+
+p {
+  height: 20px;
+}
+
+.wholeThing {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: .2s ease-in-out;
+}
+
+.greyBox {
+  display: flex;
+  align-items: center;
+  background: #C3C6CB;
+  height: 180px;
+  width: 600px;
+  padding: 1px;
+  clear: both;
+  border-style: outset;
+}
+
+.blueBar {
+  align-self: flex-start;
+  background: #0000AA;
+  height: 28px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px
+}
+
+.topBarTextWhite {
+  color: white;
+  float: left;
+}
+
+.cancelButton {
+  float: right;
+  background-color: #C3C6CB;
+  border-width: 7px;
+  border: outset;
+  border-width: 2px;
+  margin: 5px 3px 5px 3px;
+}
+
+.boxDetails {
+  width: 600px;
+  position: fixed;
+  align-self: flex-end;
+  padding: 0px 0px 20px 100px;
+}
+
+.rightBox {
+  position: absolute;
+  right: 120px;
+}
+
+input[type=text] {
+    width: 120px;
+    height: 25px;
+    box-sizing: border-box;
+    border: inset;
+    padding: 0px 0px 0px 3px;
+    border-width: 0.2em;
+}
+
+input[type=button] {
+    width: 85px;
+    height: 24px;
+    box-sizing: border-box;
+    border: outset;
+    border-width: 0.2em;
+    box-shadow: 1px 1px 1px #000000;
+}
