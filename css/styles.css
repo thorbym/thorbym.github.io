@@ -1,106 +1,208 @@
+@font-face {
+	font-family: 'px sans nouveaux';
+	src: url('/px_sans_nouveaux.woff') format('woff'), /* Modern Browsers */
+			 url('/px_sans_nouveaux.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
 body {
-  background: #55ABAA;
-    margin: 0;
+	background: #55ABAA;
+	margin: 0;
 }
 
 p {
-  height: 20px;
+	height: 20px;
+}
+
+dl {
+	list-style: none;
+	line-height: 40px;
+}
+
+li { 
+    padding-left: 16px;
+}
+
+li:hover { 
+    background-color: #0000AA;
+    color: white;
 }
 
 .wholeThing {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    transition: .2s ease-in-out;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	transition: .2s ease-in-out;
 }
 
 .greyBox {
-  display: flex;
-  align-items: center;
-  background: #C3C6CB;
-  height: 180px;
-  width: 600px;
-  padding: 1px;
-  clear: both;
-  border-style: outset;
+	display: flex;
+	align-items: center;
+	background: #C3C6CB;
+	height: 180px;
+	width: 600px;
+	padding: 1px;
+	clear: both;
+	border-style: outset;
 }
 
 .blueBar {
-  align-self: flex-start;
-  background: #0000AA;
-  height: 28px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 5px
+	align-self: flex-start;
+	background: #0000AA;
+	height: 28px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 5px
 }
 
 .topBarTextWhite {
-  color: white;
-  float: left;
+	color: white;
+	float: left;
 }
 
 .cancelButton {
-  float: right;
-  background-color: #C3C6CB;
-  border-width: 7px;
-  border: outset;
-  border-width: 2px;
-  margin: 5px 3px 5px 3px;
+	float: right;
+	background-color: #C3C6CB;
+	border-width: 7px;
+	border: outset;
+	border-width: 2px;
+	margin: 5px 3px 5px 3px;
 }
 
 .boxDetails {
-  width: 600px;
-  position: fixed;
-  align-self: flex-end;
-  padding: 0px 0px 20px 100px;
+	width: 600px;
+	position: fixed;
+	align-self: flex-end;
+	padding: 0px 0px 20px 100px;
 }
 
 .rightBox {
-  position: absolute;
-  right: 120px;
+	position: absolute;
+	right: 120px;
 }
 
 input[type=text] {
-    width: 120px;
-    height: 25px;
-    box-sizing: border-box;
-    border: inset;
-    padding: 0px 0px 0px 3px;
-    border-width: 0.2em;
+	width: 120px;
+	height: 25px;
+	box-sizing: border-box;
+	border: inset;
+	padding: 0px 0px 0px 3px;
+	border-width: 0.2em;
 }
 
 input[type=submit] {
-    width: 85px;
-    height: 24px;
-    box-sizing: border-box;
-    border: outset;
-    border-width: 0.2em;
-    box-shadow: 1px 1px 1px #000000;
+	width: 85px;
+	height: 24px;
+	box-sizing: border-box;
+	border: outset;
+	border-width: 0.2em;
+	box-shadow: 1px 1px 1px #000000;
 }
 
 .eggTimer {
-  cursor: url('eggTimer.png'), pointer;
+	cursor: url('/eggTimer.png'), pointer;
 }
 
 .bottomBar {
-  align-self: flex-end;
-  display: flex;
-  align-items: center;
-  background: #C3C6CB;
-  height: 30px;
-  width: 100%;
-  padding: 1px;
-  clear: both;
-  border-style: outset;
-  border-width: 2px 0px 0px 0px;
+	align-self: flex-end;
+	display: flex;
+	background: #C3C6CB;
+	height: 35px;
+	width: 100%;
+	padding: 1px 3px 3px 3px;
+	clear: both;
+	border-style: outset;
+	border-width: 2px 0px 0px 0px;
+	justify-content: space-between;
+}
+
+.startButton {
+	float: left;
+	display: flex;
+	align-self: center;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	width: 100px;
+	border-style: solid;
+	color: #000000;
+	z-index: 99;
+	margin: 1px 1px 1px 1px;
+	box-sizing: border-box;
+	border: outset;
+	border-width: 0.1em;
+	box-shadow: 0.1em 0.1em 0.1em #000000;
+}
+
+.startMenu {
+	position: absolute;
+	display: none;
+	flex-direction: row;
+	left: 5px;
+	bottom: 35px;
+	background: #C3C6CB;
+	height: 400px;
+	width: 280px;
+	padding: 1px;
+	border-style: outset;
+}
+
+.startMenuSide {
+	width: 15%;
+	height: 100%;
+	background: #86898E;
+	z-index: 100;
+}
+
+.startMenuList {
+	width: 85%;
+	align-self: flex-end;
+}
+
+.listItem {
+	display: flex;
+	justify-content: space-between;
+}
+
+.listItemText {
+	float: left;
+}
+
+.listItemArrow {
+	float: right;
+	font-size: 0.7em;
+	padding-right: 10px;
+}
+
+.desktopFolders {
+	position: absolute;
+	left: 50px;
+	top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.desktopFolder {
+	width: 80px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.folderTitle {
+	font-size: 0.8em;
+	color: white;
+	line-height: 25px;
 }

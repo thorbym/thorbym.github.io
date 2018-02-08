@@ -1,9 +1,101 @@
 <link rel='stylesheet' href='/css/styles.css' type='text/css'>
+<head>
+	<script>
 
+		function showStartMenu(forceHide) {
+		    var startMenu = document.getElementById("startMenu");
+		    var startButton = document.getElementById("startButton");
+		    if (startMenu.style.display === "flex" || forceHide) {
+		        startMenu.style.display = "none";
+		        startButton.style.border = "outset";
+		    } else {
+		        startMenu.style.display = "flex";
+				startButton.style.border = "inset";
+		    }
+		}
+
+		// Find first ancestor of el with tagName
+		// or undefined if not found
+		function findId(el) {
+			while (el && el.parentNode) {
+				id = el.parentNode.id;
+				if (id !== undefined) {
+					return id;
+				}
+			}
+
+			// Many DOM methods return null if they don't 
+			// find the element they are searching for
+			// It would be OK to omit the following and just
+			// return undefined
+			return null;
+		}
+
+		function openFolder(e) {
+			console.log(e);
+		}
+
+	</script>
+</head>
 <div id='wholeThing' class=wholeThing>
+	<div class='desktopFolders'>
+		<div id='myPictures' class='desktopFolder' onclick='openFolder(event);'>
+			<div class='folderIcon'>
+				<img src='directory_closed.ico' width='60px' height='60px'>
+			</div>
+			<div class='folderTitle'>
+				My Pictures
+			</div>
+		</div>
 
+		<div id='myComputer' class='desktopFolder' onclick='openFolder("myComputer");'>
+			<div class='folderIcon'>
+				<img src='computer_explorer.ico' width='60px' height='60px'>
+			</div>
+			<div class='folderTitle'>
+				My Computer
+			</div>
+		</div>
+
+		<div id='recycleBin' class='desktopFolder' onclick='openFolder("recycleBin");'>
+			<div class='folderIcon'>
+				<img src='recycle_bin_empty.ico' width='60px' height='60px'>
+			</div>
+			<div class='folderTitle'>
+				Recycle Bin
+			</div>
+		</div>
+
+	</div>
+	<div id='startMenu' class='startMenu'>
+		<div class='startMenuSide'>
+		</div>
+		<div class='startMenuList'>
+			<dl>
+				<li>
+					<div class='listItem'>
+						<div class='listItemText'>
+							<u>D</u>ocuments
+						</div>
+						<div class='listItemArrow'>
+							&#9654;
+						</div>
+					</div>
+				</li>
+				<li><u>A</u>bout Us</li>
+				<li><u>H</u>elp</li>
+				<li><u>R</u>un</li>
+			</dl>
+			<hr />
+			<dl>
+				<li>Sh<u>u</u>t Down...</li>
+			</dl>
+		</div>
+	</div>
 	<div class='bottomBar'>
-
+		<div onclick='showStartMenu()' id='startButton' class='startButton'>
+			<p>Start</p>
+		</div>
 	</div>
 
 </div>
