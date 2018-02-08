@@ -88,6 +88,10 @@ input[type=submit] {
     box-shadow: 1px 1px 1px #000000;
 }
 
+.eggTimer {
+  cursor: url('/eggTimer.png'), pointer;
+}
+
 .bottomBar {
   align-self: flex-end;
   display: flex;

@@ -1,12 +1,35 @@
 <link rel='stylesheet' href='/css/styles.css' type='text/css'>
 <head>
 	<script>
+
+		var timer = 0;
+		var pointerClass = '';
+
 		function loadPage() {
-			window.location.href = "https://thorbym.github.io/desktop.html";
+			var num = Math.floor((Math.random() * 1000) + 500);
+			timer += num;
+			setTimeout(changeMousePointer(), num);
+			if (timer < 4000) {
+				loadPage();
+			} else {
+				pointerClass = '';
+				changeMousePointer();
+				window.location.href = "https://thorbym.github.io/desktop.html";
+			}
 		}
+
 		function goBack() {
 			window.history.back();
 		}
+
+		function changeMousePointer() {
+			if (pointerClass == '') {
+				$('cursor').addClass('eggTimer.png', 'pointer');
+			} else {
+				$('cursor').removeClass('eggTimer.png', 'pointer');
+			}			
+		}
+
 	</script>
 </head>
 <div class=wholeThing>
