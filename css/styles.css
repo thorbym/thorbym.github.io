@@ -89,7 +89,7 @@ input[type=submit] {
 }
 
 .eggTimer {
-  cursor: url('/eggTimer.png'), pointer;
+  cursor: url('eggTimer.png'), pointer;
 }
 
 .bottomBar {

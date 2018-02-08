@@ -8,6 +8,7 @@
 		function loadPage() {
 			var num = Math.floor((Math.random() * 1000) + 500);
 			timer += num;
+			console.log('timer now at ' + timer);
 			setTimeout(changeMousePointer(), num);
 			if (timer < 4000) {
 				loadPage();
@@ -24,10 +25,14 @@
 
 		function changeMousePointer() {
 			if (pointerClass == '') {
+				console.log('So changing cursor to egg timer');
 				var wholeThing = document.getElementById("wholeThing");
 				wholeThing.classList.add("eggTimer");
+				pointerClass = 'eggTimer';
 			} else {
+				console.log('So changing cursor back');
 				wholeThing.classList.remove("eggTimer");
+				pointerClass = '';
 			}			
 		}
 
