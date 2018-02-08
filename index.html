@@ -24,9 +24,9 @@
 		}
 
 		function changeMousePointer() {
+			var wholeThing = document.getElementById("wholeThing");
 			if (pointerClass == '') {
 				console.log('So changing cursor to egg timer');
-				var wholeThing = document.getElementById("wholeThing");
 				wholeThing.classList.add("eggTimer");
 				pointerClass = 'eggTimer';
 			} else {
