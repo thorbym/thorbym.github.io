@@ -24,15 +24,16 @@
 
 		function changeMousePointer() {
 			if (pointerClass == '') {
-				$('cursor').addClass('eggTimer.png', 'pointer');
+				var wholeThing = document.getElementById("wholeThing");
+				wholeThing.classList.add("eggTimer");
 			} else {
-				$('cursor').removeClass('eggTimer.png', 'pointer');
+				wholeThing.classList.remove("eggTimer");
 			}			
 		}
 
 	</script>
 </head>
-<div class=wholeThing>
+<div id='wholeThing' class=wholeThing>
 
 	<div class='greyBox'>
 
