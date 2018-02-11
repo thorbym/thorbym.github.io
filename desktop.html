@@ -14,64 +14,71 @@
 		    }
 		}
 
-		// Find first ancestor of el with tagName
-		// or undefined if not found
-		function findId(el) {
-			while (el && el.parentNode) {
-				id = el.parentNode.id;
-				if (id !== undefined) {
-					return id;
-				}
-			}
-
-			// Many DOM methods return null if they don't 
-			// find the element they are searching for
-			// It would be OK to omit the following and just
-			// return undefined
-			return null;
-		}
-
 		function openFolder(e) {
-			console.log(e);
+			var image = document.getElementById(e + 'Image');
+			image.setAttribute("style", "filter: opacity(.2) drop-shadow(0 0 0 #0000AA);");
+			var title = document.getElementById(e + 'Title');
+			title.setAttribute("style", "background-color: #0000AA; border-style: dotted; border-width: 1px; border-color: white;");
 		}
 
 	</script>
 </head>
 <div id='wholeThing' class=wholeThing>
 	<div class='desktopFolders'>
-		<div id='myPictures' class='desktopFolder' onclick='openFolder(event);'>
+		<div id='myPictures' class='desktopFolder' onclick='openFolder("myPictures");'>
 			<div class='folderIcon'>
-				<img src='directory_closed.ico' width='60px' height='60px'>
+				<img id='myPicturesImage' src='img/directory_closed.ico' width='50px' height='50px'>
 			</div>
-			<div class='folderTitle'>
+			<div id='myPicturesTitle' class='folderTitle'>
 				My Pictures
 			</div>
 		</div>
 
 		<div id='myComputer' class='desktopFolder' onclick='openFolder("myComputer");'>
 			<div class='folderIcon'>
-				<img src='computer_explorer.ico' width='60px' height='60px'>
+				<img id='myComputerImage' src='img/computer_explorer.ico' width='50px' height='50px'>
 			</div>
-			<div class='folderTitle'>
+			<div id='myComputerTitle' class='folderTitle'>
 				My Computer
 			</div>
 		</div>
 
 		<div id='recycleBin' class='desktopFolder' onclick='openFolder("recycleBin");'>
 			<div class='folderIcon'>
-				<img src='recycle_bin_empty.ico' width='60px' height='60px'>
+				<img id='recycleBinImage' src='img/recycle_bin_empty.ico' width='50px' height='50px'>
 			</div>
-			<div class='folderTitle'>
+			<div id='recycleBinTitle' class='folderTitle'>
 				Recycle Bin
 			</div>
 		</div>
 
 	</div>
+
+	<div class='explorerWindow'>
+		<div class='explorerTopBar'>
+			<div class='explorerTopBarText'><img src='img/directory_closed.ico' width='25px' height='25px'> My Pictures</div>
+			<div class='cancelButton'>&#215;</div>
+		</div>
+		<div class='explorerContent'>
+		</div>
+	</div>
+
+
 	<div id='startMenu' class='startMenu'>
 		<div class='startMenuSide'>
 		</div>
 		<div class='startMenuList'>
 			<dl>
+				<li>
+					<div class='listItem'>
+						<div class='listItemText'>
+							<u>P</u>rograms
+						</div>
+						<div class='listItemArrow'>
+							&#9654;
+						</div>
+					</div>
+				</li>
 				<li>
 					<div class='listItem'>
 						<div class='listItemText'>
@@ -94,7 +101,7 @@
 	</div>
 	<div class='bottomBar'>
 		<div onclick='showStartMenu()' id='startButton' class='startButton'>
-			<p>Start</p>
+			<b>Start</b>
 		</div>
 	</div>
 
