@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='/css/styles.css' type='text/css'>
+<link rel='stylesheet' href='/css/main.css' type='text/css'>
 
 <div id='wholeThingBsod' class=wholeThingBsod>
 	<div class='bsodTitle'>
